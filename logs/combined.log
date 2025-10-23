@@ -1,0 +1,42 @@
+{"level":"info","message":"Starting read-data","service":"sheets-scanner","startTime":"2025-09-20T07:46:45.124Z","timestamp":"2025-09-20T07:46:45.125Z"}
+{"level":"info","message":"Starting read-data","service":"sheets-scanner","startTime":"2025-09-20T07:46:45.142Z","timestamp":"2025-09-20T07:46:45.142Z"}
+{"level":"info","message":"Folder mapping loaded from ./folder-mapping.json","service":"drive-scanner","timestamp":"2025-09-20T07:46:45.264Z"}
+{"level":"info","message":"Starting read-data","service":"sheets-scanner","startTime":"2025-09-20T07:46:47.223Z","timestamp":"2025-09-20T07:46:47.223Z"}
+{"level":"info","message":"Folder mapping loaded from ./folder-mapping.json","service":"drive-scanner","timestamp":"2025-09-20T07:46:47.313Z"}
+{"level":"warn","message":"Header detection failed, using first row as headers","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.319Z"}
+{"level":"warn","message":"Header detection failed, using first row as headers","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.345Z"}
+{"level":"warn","message":"Header detection failed, using first row as headers","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.756Z"}
+{"current":0,"elapsed":2808,"level":"info","message":"read-data progress Processing 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.950Z"}
+{"current":100,"elapsed":2809,"level":"info","message":"read-data progress Processed 100/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.952Z"}
+{"current":200,"elapsed":2810,"level":"info","message":"read-data progress Processed 200/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.952Z"}
+{"current":300,"elapsed":2811,"level":"info","message":"read-data progress Processed 300/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.953Z"}
+{"current":400,"elapsed":2811,"level":"info","message":"read-data progress Processed 400/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.953Z"}
+{"current":500,"elapsed":2812,"level":"info","message":"read-data progress Processed 500/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.954Z"}
+{"current":600,"elapsed":2813,"level":"info","message":"read-data progress Processed 600/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.955Z"}
+{"current":700,"elapsed":2813,"level":"info","message":"read-data progress Processed 700/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.955Z"}
+{"current":800,"elapsed":2813,"level":"info","message":"read-data progress Processed 800/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.955Z"}
+{"current":900,"elapsed":2814,"level":"info","message":"read-data progress Processed 900/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.956Z"}
+{"elapsed":2814,"endTime":"2025-09-20T07:46:47.956Z","level":"info","message":"read-data completed Processed 999 people from 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:47.957Z"}
+{"current":0,"elapsed":2901,"level":"info","message":"read-data progress Processing 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.025Z"}
+{"current":100,"elapsed":2902,"level":"info","message":"read-data progress Processed 100/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.026Z"}
+{"current":200,"elapsed":2902,"level":"info","message":"read-data progress Processed 200/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.026Z"}
+{"current":300,"elapsed":2903,"level":"info","message":"read-data progress Processed 300/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.027Z"}
+{"current":400,"elapsed":2903,"level":"info","message":"read-data progress Processed 400/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.027Z"}
+{"current":500,"elapsed":2904,"level":"info","message":"read-data progress Processed 500/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.028Z"}
+{"current":600,"elapsed":2904,"level":"info","message":"read-data progress Processed 600/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.028Z"}
+{"current":700,"elapsed":2904,"level":"info","message":"read-data progress Processed 700/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.028Z"}
+{"current":800,"elapsed":2904,"level":"info","message":"read-data progress Processed 800/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.028Z"}
+{"current":900,"elapsed":2905,"level":"info","message":"read-data progress Processed 900/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.029Z"}
+{"elapsed":2905,"endTime":"2025-09-20T07:46:48.029Z","level":"info","message":"read-data completed Processed 999 people from 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.029Z"}
+{"current":0,"elapsed":1761,"level":"info","message":"read-data progress Processing 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.984Z"}
+{"current":100,"elapsed":1762,"level":"info","message":"read-data progress Processed 100/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.985Z"}
+{"current":200,"elapsed":1763,"level":"info","message":"read-data progress Processed 200/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.986Z"}
+{"current":300,"elapsed":1763,"level":"info","message":"read-data progress Processed 300/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.986Z"}
+{"current":400,"elapsed":1764,"level":"info","message":"read-data progress Processed 400/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.987Z"}
+{"current":500,"elapsed":1764,"level":"info","message":"read-data progress Processed 500/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.987Z"}
+{"current":600,"elapsed":1765,"level":"info","message":"read-data progress Processed 600/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.988Z"}
+{"current":700,"elapsed":1765,"level":"info","message":"read-data progress Processed 700/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.988Z"}
+{"current":800,"elapsed":1766,"level":"info","message":"read-data progress Processed 800/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.989Z"}
+{"current":900,"elapsed":1766,"level":"info","message":"read-data progress Processed 900/999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.989Z"}
+{"elapsed":1766,"endTime":"2025-09-20T07:46:48.990Z","level":"info","message":"read-data completed Processed 999 people from 999 rows","service":"sheets-scanner","timestamp":"2025-09-20T07:46:48.990Z"}
+{"level":"info","message":"Folder mapping loaded from ./folder-mapping.json","service":"drive-scanner","timestamp":"2025-09-20T07:46:58.269Z"}
