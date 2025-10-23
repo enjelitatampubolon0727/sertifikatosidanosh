@@ -1,43 +1,41 @@
 import { NextResponse } from "next/server";
 import Papa from "papaparse";
 
-// Ganti link di bawah ini dengan semua link CSV dari sheet yang kamu publish
-const SHEET_URLS = [
-  "https://docs.google.com/spreadsheets/d/e/2PACX-AAA/pub?output=csv",
-  "https://docs.google.com/spreadsheets/d/e/2PACX-BBB/pub?output=csv",
-  "https://docs.google.com/spreadsheets/d/e/2PACX-CCC/pub?output=csv",
-];
-
 export async function GET() {
   try {
-    // Ambil semua CSV sekaligus
-    const results = await Promise.all(
-      SHEET_URLS.map(async (url) => {
-        const res = await fetch(url);
-        let csv = await res.text();
-
-        // Bersihkan CSV agar tidak error parsing
-        csv = csv.replace(/^\uFEFF/, "").trim();
-
-        const parsed = Papa.parse(csv, {
-          header: true,
-          skipEmptyLines: true,
-          dynamicTyping: true,
-        });
-
-        return parsed.data;
-      })
+    const response = await fetch(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzGJ3VXl5MZ8OKrF5b0ZUVNh4nQxBUjSvSvXiIt4IDOXvrc7Ie6PW4imRnKeFh_1Zh_6kSFH4lph1S/pub?output=csv",
+      { cache: "no-store" }
     );
 
-    // Gabungkan semua hasil
-    const allData = results.flat();
+    const csvText = await response.text();
 
-    return NextResponse.json(allData);
+    // Hapus baris kosong di awal atau tanda kutip yang mengganggu
+    const cleanedCsv = csvText
+      .split("\n")
+      .filter((row) => row.trim() !== "")
+      .join("\n")
+      .replace(/""/g, '"'); // bersihkan kutip ganda
+
+    const parsed = Papa.parse(cleanedCsv, {
+      header: true,
+      skipEmptyLines: true,
+    });
+
+    // Bersihkan data (hapus kolom kosong)
+    const cleanData = parsed.data.map((row) => {
+      const cleanedRow: Record<string, string> = {};
+      for (const key in row) {
+        if (key && key.trim() !== "") {
+          cleanedRow[key.trim()] = (row[key] || "").trim();
+        }
+      }
+      return cleanedRow;
+    });
+
+    return NextResponse.json(cleanData);
   } catch (error) {
     console.error(error);
-    return NextResponse.json(
-      { error: "Gagal mengambil data dari salah satu sheet", details: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
   }
 }
