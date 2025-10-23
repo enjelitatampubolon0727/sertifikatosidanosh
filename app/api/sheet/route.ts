@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import Papa from "papaparse";
 
 export async function GET() {
   try {
@@ -8,22 +9,18 @@ export async function GET() {
 
     const csvText = await response.text();
 
-    // Ganti delimiter ke ; agar bisa baca format lokal
-    const rows = csvText.trim().split("\n");
-    const headers = rows[0].split(/[;,]/); // ← pakai regex supaya bisa koma atau titik koma
-
-    const data = rows.slice(1).map((row) => {
-      const values = row.split(/[;,]/);
-      const obj: Record<string, string> = {};
-      headers.forEach((header, index) => {
-        obj[header.trim()] = values[index]?.trim() || "";
-      });
-      return obj;
+    // Gunakan papaparse agar parsing lebih akurat
+    const parsed = Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
     });
 
-    return NextResponse.json(data);
+    return NextResponse.json(parsed.data);
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch data" },
+      { status: 500 }
+    );
   }
 }
