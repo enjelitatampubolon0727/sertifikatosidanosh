@@ -7,11 +7,13 @@ export async function GET() {
     );
 
     const csvText = await response.text();
+
+    // Ganti delimiter ke ; agar bisa baca format lokal
     const rows = csvText.trim().split("\n");
-    const headers = rows[0].split(",");
+    const headers = rows[0].split(/[;,]/); // ← pakai regex supaya bisa koma atau titik koma
 
     const data = rows.slice(1).map((row) => {
-      const values = row.split(",");
+      const values = row.split(/[;,]/);
       const obj: Record<string, string> = {};
       headers.forEach((header, index) => {
         obj[header.trim()] = values[index]?.trim() || "";
