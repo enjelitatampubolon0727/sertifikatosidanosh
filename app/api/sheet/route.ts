@@ -25,4 +25,3 @@ export async function GET() {
     return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
   }
 }
-
